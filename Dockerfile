@@ -6,10 +6,10 @@ ADD . /usr/app/src
 
 RUN apt-get update
 RUN apt-get install -y software-properties-common
-RUN add-apt-repository ppa:longsleep/golang-backports
+RUN add-apt-repository ppa:gophers/archive
 RUN apt-get update
 RUN apt-get install -y make
-RUN apt-get install -y golang-go
+RUN apt-get install -y golang-1.8
 RUN apt-get install -y git
 
 
