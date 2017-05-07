@@ -12,6 +12,9 @@ RUN apt-get install -y make
 RUN apt-get install -y golang-1.8
 RUN apt-get install -y git
 
+ENV PATH=$PATH:/usr/lib/go-1.8/bin
+RUN mkdir -p ~/go/bin
+RUN mkdir -p ~/go/src
 
 RUN make release-server
 RUN make release-client
